@@ -17,5 +17,9 @@ namespace People.Library
     public interface IPeopleLogger
     {
         public void Log(PeopleLogLevel level, string message);
+        public void LogException(Exception ex)
+        {
+            Log(PeopleLogLevel.Error, ex.Message);
+        }
     }
 }

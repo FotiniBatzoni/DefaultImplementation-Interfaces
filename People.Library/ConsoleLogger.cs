@@ -8,5 +8,12 @@ namespace People.Library
         {
             Console.WriteLine($"{DateTimeOffset.Now:T} - {level}: {message}");
         }
+
+        public void LogException(Exception ex)
+        {
+            Console.WriteLine($"{DateTimeOffset.Now:T} - Error");
+            Console.WriteLine($" ExceptionType : {ex.GetType()}");
+            Console.WriteLine($" {ex.Message}");
+        }
     }
 }
